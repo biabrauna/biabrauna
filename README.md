@@ -1,6 +1,6 @@
 
-🌟 Bia Braúna - Portfólio
-Bem-vindo(a) ao meu portfólio! Eu sou a Bia Braúna, desenvolvedora apaixonada por criar soluções inovadoras com tecnologia. 🌐💡
+🌟 Bia Braúna
+Bem-vindo(a) ao meu github! Eu sou a Bia Braúna, desenvolvedora apaixonada por criar soluções inovadoras com tecnologia. 🌐💡
 
 🚀 Projetos
 [Projeto 1]: Descrição breve do projeto. 🔗Link
