@@ -11,9 +11,9 @@ Bem-vindo(a) ao meu github! Eu sou a Bia Braúna, desenvolvedora apaixonada por 
 
 Linguagens: JavaScript, Python, Java, .NET, C, C++, etc.
 
-Frameworks: React, Node.js, etc.
+Frameworks: React e Node.js.
 
-Ferramentas: Git, Docker, etc.
+Ferramentas: Git.
 
 📬 Contato
 
