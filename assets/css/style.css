@@ -453,7 +453,7 @@ footer{
         gap: 1.2rem;
     }
     .home-img, .about-img{
-        width: 80%;
+        width: 40%;
         max-width:80%;
     }
     .home-content, .about-content{
@@ -492,7 +492,22 @@ footer{
         transition: transform 0.2s;
     }
     #imagesContainer img, #imagesContainer2 img, #imagesContainer3 img {
-        max-width: 10px;
+        max-width: 60px;
+    }
+    .portfolio-layer{
+        font-size: 0.85rem;
+    }
+    .about-content p, .home-content p{
+        font-size: 0.9rem;
+    }
+    .orA{
+        font-size: 0.9rem;
+    }
+    .about-content h1, .home-content h1{
+        font-size: 1.2rem;
+    }
+    .about-content h3, .home-content h3{
+        font-size: 1.3rem;
     }
 }
 /*Small (sm): Smartphone landscape*/
@@ -550,6 +565,9 @@ footer{
     }
     .imagesContainer{
         flex-direction: row;
+    }
+    .about-content p, .home-content p{
+        font-size: 1.1rem;
     }
 
 }
