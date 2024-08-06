@@ -46,7 +46,7 @@ document.getElementById('showImagesButton').addEventListener('click', function()
         overlay.style.display = 'flex';
         
         // Add images to the container
-        const images = ['assets/img/css.png', 'assets/img/wordpress.png', 'assets/img/html.png']; // Replace with your actual image paths
+        const images = ['assets/img/css.png', 'assets/img/wordpress.png', 'assets/img/html.png', 'assets/img/js.png']; // Replace with your actual image paths
         imagesContainer.innerHTML = ''; // Clear any existing images
         images.forEach(src => {
             const img = document.createElement('img');
@@ -72,7 +72,7 @@ document.getElementById('showImagesButton2').addEventListener('click', function(
         overlay.style.display = 'flex';
         
         // Add images to the container
-        const images = ['assets/img/c++.webp', 'assets/img/java.png', 'assets/img/bd.png', 'assets/img/python.webp', 'assets/img/c.webp', 'assets/img/net.png', 'assets/img/js.png']; // Replace with your actual image paths
+        const images = ['assets/img/c++.webp', 'assets/img/java.png', 'assets/img/bd.png', 'assets/img/python.webp', 'assets/img/c.webp', 'assets/img/net.png']; // Replace with your actual image paths
         imagesContainer.innerHTML = ''; // Clear any existing images
         images.forEach(src => {
             const img = document.createElement('img');
@@ -98,7 +98,7 @@ document.getElementById('showImagesButton3').addEventListener('click', function(
         overlay.style.display = 'flex';
         
         // Add images to the container
-        const images = ['assets/img/flutter.png']; // Replace with your actual image paths
+        const images = ['assets/img/css.png', 'assets/img/html.png', 'assets/img/js.png']; // Replace with your actual image paths
         imagesContainer.innerHTML = ''; // Clear any existing images
         images.forEach(src => {
             const img = document.createElement('img');

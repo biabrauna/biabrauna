@@ -492,7 +492,7 @@ footer{
         transition: transform 0.2s;
     }
     #imagesContainer img, #imagesContainer2 img, #imagesContainer3 img {
-        max-width: 30px;
+        max-width: 10px;
     }
 }
 /*Small (sm): Smartphone landscape*/
