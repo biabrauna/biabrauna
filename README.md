@@ -1,5 +1,5 @@
 
-🌟 Bia Braúna
+🌟
 Bem-vindo(a) ao meu github! Eu sou a Bia Braúna, desenvolvedora apaixonada por criar soluções inovadoras com tecnologia. 🌐💡
 
 🚀 Projetos
