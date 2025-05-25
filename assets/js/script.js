@@ -1,4 +1,3 @@
-
 /*Turns the mmenu hamburguer into a x */
 
 const menuHamburguer = document.querySelector('.menu-hamburguer');
@@ -209,3 +208,129 @@ document.getElementById('backHome').addEventListener('click', function(event) {
 });
 
 AOS.init();
+
+const translations = {
+  pt: {
+    "header.logo": "Bia Braúna",
+    "header.role": "Desenvolvedora",
+    "nav.home": "Home",
+    "nav.services": "Serviços",
+    "nav.portfolio": "Portfólio",
+    "nav.contact": "Contato",
+    "nav.about": "Sobre",
+    "home.greeting": "Olá, eu sou",
+    "home.name": "Bia Braúna",
+    "home.subtitle": "Full-Stack <span>Desenvolvedora</span> e <span>Futura Engenheira</span><img class=\"charging\" src=\"assets/img/charged.gif\" alt=\"charging picture\">",
+    "home.description": "Nos últimos 7 anos, como estudante de computação e freelancer, venho aprimorando minhas habilidades para transformar suas ideias em realidade.",
+    "home.viewProjects": "Ver Projetos",
+    "home.or": "ou",
+    "home.readAboutMe": "Leia Sobre Mim",
+    "home.curriculo": "Currículo Lattes",
+    "services.title": "Nossos <span>Serviços</span>",
+    "services.frontend.title": "Desenvolvimento Front-End",
+    "services.frontend.desc": "Possui anos de experiência com as seguintes tecnologias, a fim de fazer sites criativos que se adequem ao objetivo do cliente.",
+    "services.backend.title": "Desenvolvimento Back-End",
+    "services.backend.desc": "Carreira majoritariamente acadêmica, com desenvolvimento de software acadêmico na área da agricultura e freelancers em diversas áreas.",
+    "services.mobile.title": "Desenvolvimento Mobile",
+    "services.mobile.desc": "Habilidade indispensável no mundo atual. Atualmente desenvolvo majoritariamente aplicativos híbridos.",
+    "services.technologies": "Tecnologias",
+    "portfolio.title": "Últimos <span>Projetos</span>",
+    "portfolio.greenhope.title": "GreenHope",
+    "portfolio.greenhope.desc": "App em desenvolvimento focado em incentivar a coleta seletiva no estado do Rio de Janeiro por meio de um jogo.",
+    "portfolio.bot.title": "Bot",
+    "portfolio.bot.desc": "Programado em python, o bot pode assumir várias responsabilidades, como nesse projeto foi listar membros por seus cargos e acompanhar as mudanças envolvidas.",
+    "portfolio.dotnet.title": ".NET",
+    "portfolio.dotnet.desc": "Software em .NET desenvolvido para a análise do crescimento e do desenvolvimento de plantas, focado em determinar as necessidades da planta a fim de aumentar a produtividade.",
+    "portfolio.clinica.title": "Clínica",
+    "portfolio.clinica.desc": "Software desenvolvido em java para agendamento e controle de consultas tanto para uso dos pacientes, quanto para uso dos médicos.",
+    "contact.title": "Fale <span>Comigo!</span>",
+    "contact.fullname": "Nome Completo",
+    "contact.email": "E-mail",
+    "contact.phone": "Telefone",
+    "contact.subject": "Assunto",
+    "contact.message": "Mensagem",
+    "contact.send": "Enviar Mensagem",
+    "about.title": "Sobre Mim",
+    "about.subtitle": "Full-Stack <span>Desenvolvedora</span> e <span>Futura Engenheira</span>",
+    "about.desc": "Eu cresci em uma cidade pequena admirada em como as invenções ao longo dos tempos foram melhorando o mundo, na programação descobri que eu poderia criar qualquer coisa que eu quisesse e me apaixonei, atualmente me desenvolvo cada dia mais para dar esse super poder aos meus clientes.",
+    "about.cta": "Vamos trabalhar juntos!",
+    "footer.copyright": "Copyright &copy; 2024 por &lt;/Bia&gt; Todos os direitos reservados."
+  },
+  en: {
+    "header.logo": "Bia Braúna",
+    "header.role": "Developer",
+    "nav.home": "Home",
+    "nav.services": "Services",
+    "nav.portfolio": "Portfolio",
+    "nav.contact": "Contact",
+    "nav.about": "About",
+    "home.greeting": "Hi, I'm",
+    "home.name": "Bia Braúna",
+    "home.subtitle": "Full-Stack <span>Developer</span> and <span>Future Engineer</span><img class=\"charging\" src=\"assets/img/charged.gif\" alt=\"charging picture\">",
+    "home.description": "Over the past 7 years, as a computer student and a freelancer, I've been improving my skills to be capable of turning your ideas into reality.",
+    "home.viewProjects": "View Projects",
+    "home.or": "or",
+    "home.readAboutMe": "Read About Me",
+    "home.curriculo": "Lattes CV",
+    "services.title": "Our <span>Services</span>",
+    "services.frontend.title": "Front-End Development",
+    "services.frontend.desc": "Years of experience with the following technologies, aiming to create creative websites that fit the client's goals.",
+    "services.backend.title": "Back-End Development",
+    "services.backend.desc": "Mainly academic career, with academic software development in agriculture and freelance work in various areas.",
+    "services.mobile.title": "Mobile Development",
+    "services.mobile.desc": "An essential skill in today's world. Currently, I mostly develop hybrid apps.",
+    "services.technologies": "Technologies",
+    "portfolio.title": "Latest <span>Projects</span>",
+    "portfolio.greenhope.title": "GreenHope",
+    "portfolio.greenhope.desc": "App under development focused on encouraging selective collection in the state of Rio de Janeiro through a game.",
+    "portfolio.bot.title": "Bot",
+    "portfolio.bot.desc": "Programmed in python, the bot can take on various responsibilities, such as listing members by their roles and tracking changes involved.",
+    "portfolio.dotnet.title": ".NET",
+    "portfolio.dotnet.desc": ".NET software developed for analyzing plant growth and development, focused on determining plant needs to increase productivity.",
+    "portfolio.clinica.title": "Clinic",
+    "portfolio.clinica.desc": "Software developed in Java for scheduling and controlling appointments for both patients and doctors.",
+    "contact.title": "Contact <span>Me!</span>",
+    "contact.fullname": "Full Name",
+    "contact.email": "E-mail",
+    "contact.phone": "Phone Number",
+    "contact.subject": "Subject",
+    "contact.message": "Message",
+    "contact.send": "Send Message",
+    "about.title": "About Me",
+    "about.subtitle": "Full-Stack <span>Developer</span> and <span>Future Engineer</span>",
+    "about.desc": "I grew up in a small town, amazed at how inventions have improved the world over time. In programming, I discovered I could create anything I wanted and fell in love. Now, I develop myself every day to give this superpower to my clients.",
+    "about.cta": "Let's work together!",
+    "footer.copyright": "Copyright &copy; 2024 by &lt;/Bia&gt; All Rights Reserved."
+  }
+};
+
+function setLanguage(lang) {
+  // Text content
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.hasAttribute('data-i18n-placeholder')) {
+        // handled below
+      } else {
+        el.innerHTML = translations[lang][key];
+      }
+    }
+  });
+  // Placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (translations[lang][key]) {
+      el.placeholder = translations[lang][key];
+    }
+  });
+}
+
+document.getElementById('ptBtn').addEventListener('click', function() {
+  setLanguage('pt');
+});
+document.getElementById('enBtn').addEventListener('click', function() {
+  setLanguage('en');
+});
+
+// Set default language
+setLanguage('pt');
