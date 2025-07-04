@@ -1,24 +1,21 @@
 
-🌟
-Bem-vindo(a) ao meu github! Eu sou a Bia Braúna, desenvolvedora apaixonada por criar soluções inovadoras com tecnologia. 🌐💡
+🌟 Welcome to my GitHub!
+Hi! I'm Bia Braúna, a developer passionate about building innovative solutions through technology. 🌐💡
 
-🚀 Projetos
- 🔗Link
- 
-💼 Habilidades
+🚀 Projects
+🔗 See my latest work and contributions across web and backend development.
+Portfolio: biabrauna.github.io/biabrauna
 
-Linguagens: JavaScript, Python, Java, .NET, C, C++, etc.
+💼 Skills
+Languages: JavaScript, TypeScript, Python, Java, C, C++ e .NET.
 
-Frameworks: React e Node.js.
+Frameworks/Libraries: React, Node.js, NestJS
 
-Ferramentas: Git.
+Tools: Git, GitHub, VS Code, Cursor.
 
-📬 Contato
-
+📬 Contact
 Email: biabn442@gmail.com
 
-LinkedIn : Ana Beatriz Braúna
+LinkedIn: Ana Beatriz Braúna
 
-Acesse o portfólio completo em https://biabrauna.github.io/biabrauna/
-
-Espero que goste!
+Thanks for visiting — I hope you enjoy exploring my work! 😊
