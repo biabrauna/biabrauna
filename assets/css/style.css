@@ -71,7 +71,6 @@ header p{
 .nav-responsive{
     display: none;
     position: absolute;
-    
     top:100%;
     left:0;
     width:100%;
@@ -92,6 +91,7 @@ header p{
 
 section{
     min-height: 100vh;
+    margin-top: 2rem;
     padding: 2rem 6rem 0 6rem;
 }
 
