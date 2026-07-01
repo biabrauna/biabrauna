@@ -7,9 +7,9 @@ Hi! I'm Bia Braúna, a developer passionate about building innovative solutions 
 Portfolio: biabrauna.github.io/biabrauna
 
 💼 Skills
-Languages: JavaScript, TypeScript, Python, Java, C, C++ e .NET.
+Languages: JavaScript, TypeScript, Python, Java, C, C++ e Visual Basic .NET.
 
-Frameworks/Libraries: React, Node.js, NestJS
+Frameworks/Libraries: React, Node.js, NestJS, Next
 
 Tools: Git, GitHub, VS Code, Cursor.
 
