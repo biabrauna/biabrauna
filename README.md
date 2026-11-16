@@ -15,7 +15,7 @@ Estudante de Engenharia Eletrônica e de Computação na UFRJ. Coloco LLMs em pr
 - **IA e LLMs:** OpenAI, Claude, prompt engineering, RAG (LangChain), busca vetorial (Qdrant), fine-tuning, agentes (Claude Agent SDK, A2A, MCP), avaliação de LLMs
 - **Linguagens e backend:** Python, TypeScript, JavaScript, Java, C, Flask, NestJS, Node.js, REST, Redis, PostgreSQL, MongoDB
 - **Frontend:** React, Next.js
-- **Cloud e DevOps:** AWS, GKE, Docker, CI/CD, Git, Linux
+- **Cloud e DevOps:** GKE, Docker, CI/CD, Git, Linux, AWS
 
 ## Contato
 
