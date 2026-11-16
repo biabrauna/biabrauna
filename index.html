@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bia Braúna | Portfólio</title>
-    <link rel="shortcut icon" href="#" type="image/x-icon">
-    <!-- custom css -->
+    <title>Bia Braúna | AI Engineer</title>
+    <meta name="description" content="Bia Braúna: AI Engineer, Python e LLMs em produção. Engenharia Eletrônica e de Computação na UFRJ.">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,217 +15,211 @@
 <body>
     <header>
         <div>
-            <a href="index.html" class="logo" data-i18n="header.logo">Bia Braúna</a>
-            <p data-i18n="header.role">Developer</p>
+            <a href="index.html" class="logo">Bia Braúna</a>
+            <p data-i18n="header.role">AI Engineer</p>
         </div>
         <div class="nav">
-                <a href="#home" data-i18n="nav.home">Home</a>
-                <a href="#services" data-i18n="nav.services">Services</a>
-                <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
-                <a href="#contact" data-i18n="nav.contact">Contact</a>
-                <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#home" data-i18n="nav.home">Início</a>
+            <a href="#experience" data-i18n="nav.experience">Experiência</a>
+            <a href="#portfolio" data-i18n="nav.portfolio">Projetos</a>
+            <a href="#skills" data-i18n="nav.skills">Habilidades</a>
+            <a href="#about" data-i18n="nav.about">Sobre</a>
+            <a href="#contact" data-i18n="nav.contact">Contato</a>
         </div>
 
         <div class="nav-responsive">
-            <a href="#home" data-i18n="nav.home">Home</a>
-            <a href="#services" data-i18n="nav.services">Services</a>
-            <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
-            <a href="#contact" data-i18n="nav.contact">Contact</a>
-            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#home" data-i18n="nav.home">Início</a>
+            <a href="#experience" data-i18n="nav.experience">Experiência</a>
+            <a href="#portfolio" data-i18n="nav.portfolio">Projetos</a>
+            <a href="#skills" data-i18n="nav.skills">Habilidades</a>
+            <a href="#about" data-i18n="nav.about">Sobre</a>
+            <a href="#contact" data-i18n="nav.contact">Contato</a>
         </div>
         <div class="language-switcher">
             <img src="assets/img/br.webp" alt="Português" id="ptBtn" style="width:auto; cursor:pointer; height: 30px;" />
             <img src="assets/img/us.png" alt="English" id="enBtn" style="width:auto; cursor:pointer; height: 33px;" />
-          </div>
+        </div>
         <div class="menu-hamburguer">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
     </header>
-    <!-- home section -->
+
+    <!-- home -->
     <section class="home" id="home" data-aos="fade-up">
-            <div class="home-img">
-                <img src="assets/img/file.png" alt="Profile picture"><img/> 
-            </div>
+        <div class="home-img">
+            <img src="assets/img/file.png" alt="Foto de Bia Braúna">
+        </div>
         <div class="home-content">
-            <h3 data-i18n="home.greeting">Hi, I'm</h3>
-            <h1 data-i18n="home.name">Bia Braúna</h1>
-            <h3 data-i18n="home.subtitle">Full-Stack <span>Developer</span> and <span>Future Enginner</span><img class="charging" src="assets/img/charged.gif" alt="charging picture"></h3>
-            
-            <p data-i18n="home.description">Over the past 7 years, as a computer student and a freelancer, I've been 
-                improving my skills to be capable of turning your ideas into reality. </p>
-            <a class="orA" href="#portfolio" data-i18n="home.viewProjects">View Projects</a>
-            <span class="or" data-i18n="home.or">or</span>
-            <a class="orA" href="#about" data-i18n="home.readAboutMe">Read About Me</a>
-            
+            <h3 data-i18n="home.greeting">Olá, eu sou</h3>
+            <h1>Bia Braúna</h1>
+            <h3 data-i18n="home.subtitle">AI <span>Engineer</span> · Python · <span>LLMs</span> em produção</h3>
+            <p data-i18n="home.description">Estudante de Engenharia Eletrônica e de Computação na UFRJ. Coloco LLMs em produção: pipelines de IA generativa que escrevem catálogos de e-commerce na FashionAI, e automações em Python e um chat com RAG na Globo.</p>
+            <a class="orA" href="#portfolio" data-i18n="home.viewProjects">Ver projetos</a>
+            <span class="or" data-i18n="home.or">ou</span>
+            <a class="orA" href="#experience" data-i18n="home.viewExperience">Ver experiência</a>
+
             <div class="social-media">
-                <a target="_blank" href="https://www.linkedin.com/in/ana-beatriz-bra%C3%BAna-740639314/"><i class='bx bxl-linkedin'></i></a>
-                <a target="_blank" href="https://www.instagram.com/bia_brauna/?next=%2F"><i class='bx bxl-instagram' ></i></a>
-                <a target="_blank" href="https://wa.me/5561996671742"><i class='bx bxl-whatsapp'></i></a>
-                <a target="_blank" href="https://github.com/biabrauna"><i class='bx bxl-github' ></i></a>
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/ana-beatriz-bra%C3%BAna-740639314/" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a target="_blank" rel="noopener" href="https://github.com/biabrauna" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="mailto:ana.beatriz.b.20241@poli.ufrj.br" aria-label="E-mail"><i class='bx bx-envelope'></i></a>
             </div>
-
-            <div> 
-                <a target="_blank" href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K2772190Z6&tokenCaptchar=03AFcWeA4ZlEFwF-bUbtVQP2iiv46QPepD-nfxFONGysRZ1m2QOho5tMToCGuhKQcOPIOY1yNHzmAa0cOJLN-kI0Kh7HP0SvnDVlSaiDoNTm3ywx88gJZ1P5bIa1E0r5uHIVnOmvQCnErp1vAlMZFDDcInNHFUmydpdS_n1PsIpnSIeyHoqbT491KPFK2JnwmX8VWTeyR4NXgJbFOXdHP2WCp5e7srUY2Z1QJB2yH4sQCtHNX0dy6gN1X5jQMOmCY0VqJfy7DvhTOOVQw5aTONf471xl_PI0xqPEGEWgK9vFODaA9V2k7p0l7NTPOE3a9gx3ZHh2AdhLAY5MYbSJFk0bt1pf28bV7x2PzhQuyLasfcjVUMVhJ6b1BsnW1VHwkl7n4DqJq2sW8uokV_w_m2IeUHhb8so-_cuteFdVBDfUBLpyMbdvFErVk8r-6harwZIVNFMSe_bdJzC_PqOZy4ySLTneY8TWUYfN9eHsTPkzAjJpGp2o3GDt2XBfAiCaV-qBW7chJmO3A_tmJ4eeEQPCkcUaMKFYeqXHvw14nRRQNIxh6hfFzfuqyudzxRny_UwUgfTNRSG3v9dyQtjb_31tA3zB9QRCsWzyLaMAvleAHf_ratqBbTqrb8Ii_nf59ksE39dBJsoZs6qy6-h5Ftvia2CbA-6kEZ4h3sxmKp48r-39KoZAR50EM" class="btn" data-i18n="home.curriculo">Currículo Lattes</a>  
-            </div>
-            
-        </div>
-
-        
-            
-
-    </section>
-    <!-- /home section -->
-    
-    <!-- service section -->
-    <section class="services" id="services" data-aos="fade-up">
-        <h2 data-i18n="services.title">Our <span>Services</span></h2>
-
-        <div class="services-container">
-            <div class="services-box">
-                <i class='bx bx-code-alt' ></i>
-                <h3 data-i18n="services.frontend.title">Front-End Development</h3>
-                <p data-i18n="services.frontend.desc"> Possui anos de experiência com as seguintes tecnologias, afim de fazer sites criativos que se adequem ao objetivo do cliente.</p>
-                <button id="showImagesButton" class="showImagesButton" data-i18n="services.technologies">Tecnologias</button>
-            </div>
-
-            <div id="overlay" class="overlay">
-                <div id="imagesContainer" class="imagesContainer">
-                </div>
-            </div>
-
-            <div class="services-box">
-                <i class='bx bx-code-curly'></i>
-                <h3 data-i18n="services.backend.title">Back-End Development</h3>
-                <p data-i18n="services.backend.desc"> Carreira majoritariamente acadêmica, com desenvolvimento de software acadêmico na área da agricultura e freelancers em diversas áreas.</p>
-                <button id="showImagesButton2" class="showImagesButton" data-i18n="services.technologies">Tecnologias</button>
-            </div>
-
-            <div id="overlay2" class="overlay">
-                <div id="imagesContainer2" class="imagesContainer">
-                </div>
-            </div>
-
-            <div class="services-box">
-                <i class='bx bx-mobile-alt'></i>
-                <h3 data-i18n="services.mobile.title">Mobile Development</h3>
-                <p data-i18n="services.mobile.desc">Habilidade indispensável no mundo atual. Atualmente desenvolvo majoritariamente aplicativos híbridos.</p>
-                <button id="showImagesButton3" class="showImagesButton" data-i18n="services.technologies">Tecnologias</button>
-            </div>   
-
-            <div id="overlay3" class="overlay">
-                <div id="imagesContainer3" class="imagesContainer">
-                </div>
-            </div>
-
         </div>
     </section>
-    <!-- /service section -->
-    <!-- portifolio section -->
+
+    <!-- experience -->
+    <section class="services" id="experience" data-aos="fade-up">
+        <h2 data-i18n="experience.title">Experiência <span>profissional</span></h2>
+
+        <div class="xp-container">
+            <article class="xp-box">
+                <div class="xp-head">
+                    <i class='bx bx-bot'></i>
+                    <div>
+                        <h3 data-i18n="xp.globo.role">Desenvolvedora Python Júnior · Automação</h3>
+                        <p class="xp-org" data-i18n="xp.globo.org">Globo (via SysManager) · jun/2026</p>
+                    </div>
+                </div>
+                <ul>
+                    <li data-i18n="xp.globo.1">Sustento e evoluo cerca de 40 automações RPA em Python, de rotinas diárias a processos mensais de fechamento contábil.</li>
+                    <li data-i18n="xp.globo.2">Atuo no desenvolvimento de um chat com RAG (LangChain) que responde perguntas a partir de documentos internos.</li>
+                    <li data-i18n="xp.globo.3">No hackathon interno, construí um Agent Gateway (Flask, protocolo A2A, MongoDB) para rotear tarefas entre agentes de IA e desenvolvi agentes que se comunicam entre si por A2A.</li>
+                    <li data-i18n="xp.globo.4">Investigo e corrijo incidentes em produção, registrando causa raiz e melhorias para evitar reincidência.</li>
+                </ul>
+                <div class="tags"><span>Python</span><span>RPA</span><span>LangChain</span><span>RAG</span><span>A2A</span><span>Flask</span><span>MongoDB</span></div>
+            </article>
+
+            <article class="xp-box">
+                <div class="xp-head">
+                    <i class='bx bx-store-alt'></i>
+                    <div>
+                        <h3 data-i18n="xp.fashion.role">Desenvolvedora Full Stack &amp; IA</h3>
+                        <p class="xp-org" data-i18n="xp.fashion.org">FashionAI · IA generativa para e-commerce · mar/2025</p>
+                    </div>
+                </div>
+                <ul>
+                    <li data-i18n="xp.fashion.1">Pipelines com LLMs que classificam produtos entre +42 categorias e geram descrições, nomes e tags de SEO para catálogos de marcas de moda, com refinamento de prompts a partir do feedback de cada cliente.</li>
+                    <li data-i18n="xp.fashion.2">Sistema de versionamento de prompts com variáveis por cliente, que reduziu em ~60% o tempo de configuração de novos clientes.</li>
+                    <li data-i18n="xp.fashion.3">Busca vetorial híbrida (Qdrant, vetores densos e esparsos) para busca de produtos e personalização da navegação.</li>
+                    <li data-i18n="xp.fashion.4">Fine-tuning da OpenAI em jobs em lote com Redis e filas; +30 endpoints REST e integrações com VTEX, Shopify, Omnichat e OpenAI.</li>
+                </ul>
+                <div class="tags"><span>LLMs</span><span>OpenAI</span><span>Qdrant</span><span>TypeScript</span><span>NestJS</span><span>PostgreSQL</span><span>Redis</span></div>
+            </article>
+        </div>
+    </section>
+
+    <!-- projects -->
     <section class="portfolio" id="portfolio">
-        <h2 data-i18n="portfolio.title">Latest <span>Projects</span></h2>
+        <h2 data-i18n="portfolio.title">Meus <span>projetos</span></h2>
 
-        <div class="portfolio-container">
-
-            <div class="portfolio-box" data-aos="fade-up">
-                <img src="assets/img/app-sustentavel-1-1024x583.webp" alt="">
-
-                <div class="portfolio-layer">
-                    <h4 data-i18n="portfolio.greenhope.title">Econsciente</h4>
-                    <p data-i18n="portfolio.greenhope.desc">App em desenvolvimento focado em incentivar a coleta seletiva no estado do Rio de Janeiro por meio de um jogo.
-                    </p>
-                    <a href="https://interface-econsciente.vercel.app/" target="_blank"><i class='bx bx-link-external'></i></a>
+        <div class="proj-container">
+            <article class="proj-card" data-aos="fade-up">
+                <img src="assets/img/proj-financas.webp" alt="Relatório de gastos por mês e por categoria gerado pelo app Finanças, com dados fictícios">
+                <div class="proj-body">
+                    <h4 data-i18n="proj.financas.title">Finanças · app de finanças com IA</h4>
+                    <p data-i18n="proj.financas.desc">Categoriza os gastos da fatura do cartão. Regras e um dicionário aprendido resolvem os gastos recorrentes sem custo; o LLM entra só para estabelecimentos novos, com saída estruturada e lista fechada de categorias, e o que tem baixa confiança vai para revisão humana, que ensina o dicionário.</p>
+                    <p class="proj-result" data-i18n="proj.financas.result">Avaliação com divisão por tempo: 63,9% dos gastos resolvidos sem LLM, com 100% de acerto. 33 testes automatizados.</p>
+                    <div class="tags"><span>Python</span><span>Claude API</span><span>pytest</span></div>
+                    <div class="proj-links">
+                        <a target="_blank" rel="noopener" href="https://github.com/biabrauna/financas"><i class='bx bxl-github'></i> <span data-i18n="proj.code">Código</span></a>
+                    </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-box" data-aos="fade-up">
-                <img src="assets/img/atdmedico.avif" alt="taxi">
-
-                <div class="portfolio-layer">
-                    <h4 data-i18n="portfolio.clinica.title">Clínica</h4>
-                    <p data-i18n="portfolio.clinica.desc">Software desenvolvido em java para agendamento e controle de consultas tanto para uso dos pacientes, quanto para uso dos médicos.
-                    </p>
-                    <a href="https://dutton-clinic-interface2-gilt.vercel.app/login" target="_blank"><i class='bx bx-link-external'></i></a>
+            <article class="proj-card" data-aos="fade-up">
+                <img src="assets/img/proj-econsciente.webp" alt="Tela inicial do E-Consciente">
+                <div class="proj-body">
+                    <h4 data-i18n="proj.econsciente.title">E-Consciente · gestão de resíduos com IA</h4>
+                    <p data-i18n="proj.econsciente.desc">Classificador de resíduos com visão computacional que substitui a triagem manual, num app que incentiva a coleta seletiva no Rio de Janeiro.</p>
+                    <p class="proj-result" data-i18n="proj.econsciente.result">Pipeline de agentes autônomos (Planner → Executor → Tester) com Claude Agent SDK, que gerou commits reais e poupou ~5–6 h de trabalho repetitivo.</p>
+                    <div class="tags"><span>Python</span><span>Flask</span><span>Visão Computacional</span><span>Claude Agent SDK</span><span>NestJS</span><span>React</span></div>
+                    <div class="proj-links">
+                        <a target="_blank" rel="noopener" href="https://interface-econsciente.vercel.app/"><i class='bx bx-link-external'></i> Demo</a>
+                    </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-box" data-aos="fade-up">
-                <img src="assets/img/discord.png" alt="">
-
-                <div class="portfolio-layer">
-                    <h4 data-i18n="portfolio.bot.title">Bot</h4>
-                    <p data-i18n="portfolio.bot.desc">Programado em python, o bot pode assumir várias responsabilidades, como nesse projeto foi listar membros por seus cargos e acompanhar as mudanças envolvidas.
-                    </p>
-                    <!--<a href="#"><i class='bx bx-link-external'></i></a>-->
+            <article class="proj-card" data-aos="fade-up">
+                <img src="assets/img/proj-rodnan.webp" alt="Calculadora do escore de Rodnan">
+                <div class="proj-body">
+                    <h4 data-i18n="proj.rodnan.title">Rodnan Score · avaliação médica</h4>
+                    <p data-i18n="proj.rodnan.desc">Calculadora clínica do escore de Rodnan: o médico clica nas regiões do corpo e o escore é somado na hora.</p>
+                    <p class="proj-result" data-i18n="proj.rodnan.result">Validada por especialistas e adotada no doutorado de um pesquisador da UFRJ.</p>
+                    <div class="tags"><span>TypeScript</span><span>Next.js</span></div>
+                    <div class="proj-links">
+                        <a target="_blank" rel="noopener" href="https://rodnan-score.vercel.app"><i class='bx bx-link-external'></i> Demo</a>
+                    </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-box" data-aos="fade-up">
-                <img src="assets/img/software.jpg" alt="">
-
-                <div class="portfolio-layer">
-                    <h4 data-i18n="portfolio.dotnet.title">.NET</h4>
-                    <p data-i18n="portfolio.dotnet.desc">Software em .NET desenvolvido para a análise do crescimento e do desenvolvimento de plantas, focado em determinar as necessidades da planta a fim de aumentar a produtividade.
-                    </p>
-                    <!--<a href="#"><i class='bx bx-link-external'></i></a>-->
+            <article class="proj-card" data-aos="fade-up">
+                <img src="assets/img/atdmedico.avif" alt="Atendimento médico, ilustração do projeto Clínica Dutton">
+                <div class="proj-body">
+                    <h4 data-i18n="proj.clinica.title">Clínica Dutton · agendamento de consultas</h4>
+                    <p data-i18n="proj.clinica.desc">Sistema de agendamento e controle de consultas, com áreas separadas para pacientes e médicos.</p>
+                    <div class="tags"><span>Java</span><span>Full Stack</span></div>
+                    <div class="proj-links">
+                        <a target="_blank" rel="noopener" href="https://dutton-clinic-interface2-gilt.vercel.app/login"><i class='bx bx-link-external'></i> Demo</a>
+                        <a target="_blank" rel="noopener" href="https://github.com/biabrauna/Clinica-Dutton"><i class='bx bxl-github'></i> <span data-i18n="proj.code">Código</span></a>
+                    </div>
                 </div>
-            </div>
-
+            </article>
         </div>
     </section>
-    <!-- /portifolio section -->
-    <!-- contact section -->
-    <section class="contact" id="contact" data-aos="fade-up">
-        <h2 data-i18n="contact.title">Contact <span>Me!</span></h2>
 
-        <form>
-
-            <div class="input-box">
-                <input type="text" placeholder="Full Name" id="name" data-i18n-placeholder="contact.fullname">
-                <input type="email" placeholder="E-mail" id="e-mail" data-i18n-placeholder="contact.email">
+    <!-- skills -->
+    <section class="skills" id="skills" data-aos="fade-up">
+        <h2 data-i18n="skills.title">Minhas <span>habilidades</span></h2>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h3><i class='bx bx-brain'></i> <span data-i18n="skills.ai">IA e LLMs</span></h3>
+                <div class="tags"><span>LLMs (OpenAI, Claude)</span><span>Prompt engineering</span><span>RAG (LangChain)</span><span>Busca vetorial (Qdrant)</span><span>Fine-tuning</span><span>Agentes (Claude Agent SDK)</span><span>A2A</span><span>MCP</span><span data-i18n="skills.eval">Avaliação de LLMs</span><span data-i18n="skills.structured">Saída estruturada</span></div>
             </div>
-
-            <div class="input-box">
-                <input type="number" placeholder="Phone Number" id="phoneNumber" data-i18n-placeholder="contact.phone">
-                <input type="text" placeholder="Subject" id="subject" data-i18n-placeholder="contact.subject">
+            <div class="skill-group">
+                <h3><i class='bx bx-code-curly'></i> <span data-i18n="skills.backend">Linguagens e backend</span></h3>
+                <div class="tags"><span>Python</span><span>TypeScript</span><span>JavaScript</span><span>Java</span><span>C</span><span>Flask</span><span>NestJS</span><span>Node.js</span><span>REST</span><span>Redis</span><span data-i18n="skills.queues">Filas</span><span>PostgreSQL</span><span>MongoDB</span></div>
             </div>
-
-            <textarea cols="30" rows="8" placeholder="Message" id="text" data-i18n-placeholder="contact.message"></textarea>
-           <button id="sendMessage" class="showImagesButton" data-i18n="contact.send">Send Message</button>
-
-        </form>
-
+            <div class="skill-group">
+                <h3><i class='bx bx-layout'></i> Frontend</h3>
+                <div class="tags"><span>React</span><span>Next.js</span><span>HTML</span><span>CSS</span></div>
+            </div>
+            <div class="skill-group">
+                <h3><i class='bx bx-cloud'></i> <span data-i18n="skills.cloud">Cloud, DevOps e qualidade</span></h3>
+                <div class="tags"><span>AWS</span><span>GKE</span><span>Docker</span><span>CI/CD</span><span>Git</span><span>Linux</span><span>pytest</span><span>RPA</span></div>
+            </div>
+        </div>
     </section>
-    <!-- /contact section -->
-    <!-- about section -->
+
+    <!-- about -->
     <section class="about" id="about" data-aos="fade-up">
         <div class="about-img">
-            <img src="assets/img/file.png" alt="About me">
+            <img src="assets/img/file.png" alt="Foto de Bia Braúna">
         </div>
-
         <div class="about-content">
-            <h3 data-i18n="about.title">About Me</h3>
-            <h1 data-i18n="about.subtitle">Full-Stack <span>Developer</span> and <span>Future Enginner</span></h1>
-            <p data-i18n="about.desc">Eu cresci em uma cidade pequena admirada em como as invenções 
-                ao longo dos tempos foram melhorando o mundo, 
-                na programação descobri que eu poderia criar qualquer 
-                coisa que eu quisesse e me apaixonei, atualmente me 
-                desenvolvo cada dia mais para dar esse
-                 super poder aos meus clientes.</p>
-            <button href="#" class="contactbtn" id="backHome" data-i18n="about.cta">Let's work together!</button>
+            <h3 data-i18n="about.title">Sobre mim</h3>
+            <h1 data-i18n="about.subtitle">Engenharia na <span>UFRJ</span>, IA em <span>produção</span></h1>
+            <p data-i18n="about.desc">Estudo Engenharia Eletrônica e de Computação na Poli/UFRJ e trabalho com IA aplicada desde 2025. Gosto de transformar um problema de negócio em um sistema de IA que dá para medir: quanto acerta, quanto custa e quando precisa de uma pessoa. Quero construir produtos de IA com impacto mensurável. Falo inglês fluente.</p>
+            <a class="contactbtn" href="#contact" data-i18n="about.cta">Vamos conversar</a>
         </div>
-
     </section>
-    <!-- /about section -->
+
+    <!-- contact -->
+    <section class="contact contact-section" id="contact" data-aos="fade-up">
+        <h2 data-i18n="contact.title">Fale <span>comigo</span></h2>
+        <p class="contact-intro" data-i18n="contact.intro">O jeito mais rápido de falar comigo é por e-mail ou LinkedIn.</p>
+        <div class="contact-links">
+            <a href="mailto:ana.beatriz.b.20241@poli.ufrj.br"><i class='bx bx-envelope'></i> ana.beatriz.b.20241@poli.ufrj.br</a>
+            <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/ana-beatriz-bra%C3%BAna-740639314/"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+            <a target="_blank" rel="noopener" href="https://github.com/biabrauna"><i class='bx bxl-github'></i> github.com/biabrauna</a>
+        </div>
+    </section>
 
     <footer>
-        <p data-i18n="footer.copyright">Copyright &copy; 2024 by &lt;/Bia&gt; All Rights Reserved. </p>
+        <p>&copy; 2026 Bia Braúna</p>
     </footer>
-    <button id="scrollToTopBtn" class="fixed-button" onclick="scrollToTop()"><i class='bx bxs-up-arrow-alt'></i></button>
-    <button id="contactMeBtn" class="contact" onclick="scrollToSection()"><i class='bx bxs-envelope'></i></button>
+    <button id="scrollToTopBtn" class="fixed-button" aria-label="Voltar ao topo"><i class='bx bxs-up-arrow-alt'></i></button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="assets/js/script.js"></script>
 </html>

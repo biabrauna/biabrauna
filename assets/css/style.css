@@ -758,3 +758,134 @@ footer{
 .blink {
     animation: blink 0.9s infinite;
 }
+/* ===== 2026: experiência, projetos, habilidades e contato ===== */
+.skills h2{
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+.services, .skills, .contact-section{ min-height: auto; }
+
+.tags{ display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
+.tags span{
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    background: rgba(127, 0, 255, 0.08);
+    color: var(--main-color);
+}
+
+/* experiência */
+.xp-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+.xp-box{
+    padding: 1.6rem 1.8rem;
+    border-radius: 1.2rem;
+    border: solid 0.15rem var(--bg-color-01);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(230, 232, 250, 0.95) 100%);
+    transition: 0.4s ease;
+}
+.xp-box:hover{
+    border: solid 0.15rem var(--main-color);
+    box-shadow: 0 10px 30px rgba(127, 0, 255, 0.15);
+}
+.xp-head{ display: flex; gap: 1rem; align-items: center; margin-bottom: 0.8rem; }
+.xp-head i{ font-size: 2.6rem; color: var(--main-color); }
+.xp-head h3{ font-size: 1.2rem; font-family: "Space Grotesk", sans-serif; }
+.xp-org{ color: var(--color-01); font-size: 0.95rem; margin-top: 0.15rem; }
+.xp-box ul{ padding-left: 1.2rem; }
+.xp-box li{ margin: 0.45rem 0; line-height: 1.5; font-size: 0.97rem; }
+
+/* projetos: texto sempre visível (no celular não existe hover) */
+.proj-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+.proj-card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    transition: 0.4s ease;
+}
+.proj-card:hover{ transform: translateY(-4px); box-shadow: 0 12px 32px rgba(127, 0, 255, 0.18); }
+.proj-card img{ width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; border-bottom: 1px solid var(--bg-color-02); }
+.proj-body{ padding: 1.2rem 1.4rem 1.4rem; display: flex; flex-direction: column; flex: 1; }
+.proj-body h4{ font-size: 1.2rem; font-family: "Space Grotesk", sans-serif; margin-bottom: 0.5rem; }
+.proj-body p{ line-height: 1.5; font-size: 0.95rem; opacity: 0.9; }
+.proj-result{ margin-top: 0.5rem; font-weight: 600; }
+.proj-links{ display: flex; gap: 0.8rem; margin-top: auto; padding-top: 1rem; }
+.proj-links a{
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    padding: 0.45rem 0.9rem; border-radius: 0.6rem;
+    background: var(--main-color); color: #fff; font-weight: 600; font-size: 0.9rem;
+}
+.proj-links a span{ color: #fff; }
+.proj-links a:hover{ opacity: 0.85; }
+
+/* habilidades */
+.skills-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+.skill-group{
+    padding: 1.4rem 1.6rem;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(230, 232, 250, 0.95) 100%);
+}
+.skill-group h3{ font-size: 1.1rem; font-family: "Space Grotesk", sans-serif; display: flex; align-items: center; gap: 0.5rem; }
+.skill-group h3 i{ color: var(--main-color); font-size: 1.5rem; }
+.skill-group h3 span{ color: var(--text-color); }
+
+/* sobre e contato */
+a.contactbtn{ display: inline-block; margin-top: 1.5rem; }
+.contact-intro{ text-align: center; opacity: 0.85; margin-bottom: 1.5rem; }
+.contact-links{ display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; padding-bottom: 3rem; }
+.contact-links a{
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.8rem 1.2rem; border-radius: 0.8rem;
+    background: #fff; color: var(--text-color); font-weight: 500;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); transition: 0.3s ease;
+}
+.contact-links a i{ font-size: 1.4rem; color: var(--main-color); }
+.contact-links a:hover{ box-shadow: 0 8px 24px rgba(127, 0, 255, 0.2); }
+
+@media (min-width: 768px){
+    .xp-container, .proj-container, .skills-grid{ grid-template-columns: 1fr 1fr; }
+}
+
+/* ajustes de tamanho */
+@media (min-width: 0px){
+    .home{ min-height: auto; padding-top: 7rem; }
+    .home-content h1{ font-size: 2rem; }
+    .xp-box{ padding: 1.2rem 1.1rem; }
+    .xp-box ul{ padding-left: 1rem; }
+    .home-content p, .about-content p{ text-align: left; }
+}
+@media (min-width: 768px){
+    .home{ min-height: 100vh; }
+    .about{ text-align: left; }
+    .about-content h1{ font-size: 2.2rem; }
+    .about-content h3{ font-size: 1.6rem; }
+    .xp-box{ padding: 1.6rem 1.8rem; }
+}
+@media (min-width: 1200px){
+    .home-content h1{ font-size: 2.7rem; }
+}

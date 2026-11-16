@@ -1,336 +1,160 @@
-/*Turns the mmenu hamburguer into a x */
-
+// Menu hamburguer
 const menuHamburguer = document.querySelector('.menu-hamburguer');
-menuHamburguer.addEventListener('click', ()=> {
-    toggleMenu();
-});
+const navResponsive = document.querySelector('.nav-responsive');
 
-function toggleMenu(){
-    const nav = document.querySelector('.nav-responsive');
+menuHamburguer.addEventListener('click', () => {
     menuHamburguer.classList.toggle('change');
-    
-    if(menuHamburguer.classList.contains('change')){
-        nav.style.display = 'block';
-    } else{
-        nav.style.display = 'none';
-    }
-}
-
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
-
-// Mostrar ou esconder o botão dependendo da posição de scroll
-window.onscroll = function() {
-    var scrollToTopBtn = document.getElementById('scrollToTopBtn');
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopBtn.style.display = 'block';
-    } else {
-        scrollToTopBtn.style.display = 'none';
-    }
-};
-document.getElementById('contactMeBtn').addEventListener('click', function(){
-    scrollToSection('contact');
-})
-
-document.getElementById('showImagesButton').addEventListener('click', function() {
-    const overlay = document.getElementById('overlay');
-    const imagesContainer = document.getElementById('imagesContainer');
-    
-    // Toggle visibility of the overlay
-    if (overlay.style.display === 'none' || overlay.style.display === '') {
-        overlay.style.display = 'flex';
-        
-        // Add images to the container
-        const images = ['assets/img/css.png', 'assets/img/wordpress.png', 'assets/img/html.png', 'assets/img/js.png']; // Replace with your actual image paths
-        imagesContainer.innerHTML = ''; // Clear any existing images
-        images.forEach(src => {
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = 'Interactive Image';
-            img.addEventListener('click', () => {
-                alert(`You clicked on ${src}`);
-            });
-            imagesContainer.appendChild(img);
-        });
-        document.getElementById('overlay').addEventListener('click', function(){
-                overlay.style.display = 'none';
-            })
-    }
+    navResponsive.style.display = menuHamburguer.classList.contains('change') ? 'block' : 'none';
 });
 
-document.getElementById('showImagesButton2').addEventListener('click', function() {
-    const overlay = document.getElementById('overlay2');
-    const imagesContainer = document.getElementById('imagesContainer2');
-    
-    // Toggle visibility of the overlay
-    if (overlay.style.display === 'none' || overlay.style.display === '') {
-        overlay.style.display = 'flex';
-        
-        // Add images to the container
-        const images = ['assets/img/c++.webp', 'assets/img/java.png', 'assets/img/bd.png', 'assets/img/python.webp', 'assets/img/c.webp', 'assets/img/net.png']; // Replace with your actual image paths
-        imagesContainer.innerHTML = ''; // Clear any existing images
-        images.forEach(src => {
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = 'Interactive Image';
-            img.addEventListener('click', () => {
-                alert(`You clicked on ${src}`);
-            });
-            imagesContainer.appendChild(img);
-        });
-        document.getElementById('overlay2').addEventListener('click', function(){
-                overlay.style.display = 'none';
-            })
-    }
-});
-
-document.getElementById('showImagesButton3').addEventListener('click', function() {
-    const overlay = document.getElementById('overlay3');
-    const imagesContainer = document.getElementById('imagesContainer3');
-    
-    // Toggle visibility of the overlay
-    if (overlay.style.display === 'none' || overlay.style.display === '') {
-        overlay.style.display = 'flex';
-        
-        // Add images to the container
-        const images = ['assets/img/css.png', 'assets/img/html.png', 'assets/img/js.png']; // Replace with your actual image paths
-        imagesContainer.innerHTML = ''; // Clear any existing images
-        images.forEach(src => {
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = 'Interactive Image';
-            img.addEventListener('click', () => {
-                alert(`You clicked on ${src}`);
-            });
-            imagesContainer.appendChild(img);
-        });
-        document.getElementById('overlay3').addEventListener('click', function(){
-                overlay.style.display = 'none';
-            })
-    }
-});
-
-document.getElementById('sendMessage').addEventListener('click', function() {
-    event.preventDefault(); // Impede o envio do formulário
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('e-mail').value.trim();
-    const phoneNumber = document.getElementById('phoneNumber').value.trim();
-
-    if (name === '' || email === '' || phoneNumber === '') {
-        // Exibe um alerta se algum dos campos estiver vazio
-        Swal.fire({
-            title: 'Erro!',
-            text: 'Por favor, preencha todos os campos obrigatórios.',
-            imageUrl: 'assets/img/error.png',
-            imageWidth: 100,
-            imageHeight: 100,
-            imageAlt: 'Erro',
-            confirmButtonText: 'OK'
-        });
-    } else {
-        Swal.fire({
-            title: 'Mensagem enviada!',
-            text: 'Sua mensagem foi enviada com sucesso.',
-            imageUrl: 'assets/img/certo.png',
-            imageWidth: 100,
-            imageHeight: 100,
-            imageAlt: 'Certo',
-            confirmButtonText: 'OK'
-    });
-
-    document.getElementById('name').value = '';
-    document.getElementById('phoneNumber').value = '';
-    document.getElementById('e-mail').value = '';
-    document.getElementById('subject').value = '';
-    document.getElementById('text').value = '';
-}});
-
-// Função para rolar para uma seção e centralizá-la na tela
+// Rola até a seção descontando a altura do header fixo
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
-    if (section) {
-        const headerHeight = document.querySelector('header').offsetHeight;
-        const sectionTop = section.offsetTop - headerHeight;
-        window.scrollTo({
-            top: sectionTop,
-            behavior: 'smooth'
-        });
-    }
+    if (!section) return;
+    const headerHeight = document.querySelector('header').offsetHeight;
+    window.scrollTo({ top: section.offsetTop - headerHeight, behavior: 'smooth' });
 }
 
-// Adicione um evento de clique para cada link no menu
-document.querySelectorAll('header .nav a').forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault(); // Impede o comportamento padrão do link
-        const sectionId = this.getAttribute('href').substring(1); // Obtém o ID da seção
-        scrollToSection(sectionId); // Rola para a seção
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+        scrollToSection(link.getAttribute('href').substring(1));
+        if (menuHamburguer.classList.contains('change')) {
+            menuHamburguer.classList.remove('change');
+            navResponsive.style.display = 'none';
+        }
     });
 });
 
-// Adicione um evento de clique para cada link no menu hamburguer
-document.querySelectorAll('header .nav-responsive a').forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault(); // Impede o comportamento padrão do link
-        const sectionId = this.getAttribute('href').substring(1); // Obtém o ID da seção
-        scrollToSection(sectionId); // Rola para a seção
-    });
-});
-
-
-
-document.getElementById('backHome').addEventListener('click', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão do link
-
-    // Rola de volta para a seção "Home"
-    const homeSection = document.getElementById('home');
-    if (homeSection) {
-        const headerHeight = document.querySelector('header').offsetHeight;
-        const sectionTop = homeSection.offsetTop - headerHeight;
-        window.scrollTo({
-            top: sectionTop,
-            behavior: 'smooth'
-        });
-    }
-
-    // Faz o ícone do WhatsApp piscar
-    const whatsappIcon = document.querySelector('.bx.bxl-whatsapp');
-    whatsappIcon.classList.add('blink');
-
-    // Remove a classe de animação após alguns segundos
-    setTimeout(function() {
-        whatsappIcon.classList.remove('blink');
-    }, 6000); // 3000 milissegundos = 3 segundos (ajuste conforme desejado)
+// Botão de voltar ao topo
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+scrollToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+window.addEventListener('scroll', () => {
+    scrollToTopBtn.style.display = document.documentElement.scrollTop > 20 ? 'block' : 'none';
 });
 
 AOS.init();
 
+// Traduções. O HTML já vem em português; o inglês substitui os textos com data-i18n.
 const translations = {
   pt: {
-    "header.logo": "Bia Braúna",
-    "header.role": "Desenvolvedora",
-    "nav.home": "Home",
-    "nav.services": "Serviços",
-    "nav.portfolio": "Portfólio",
-    "nav.contact": "Contato",
+    "header.role": "AI Engineer",
+    "nav.home": "Início",
+    "nav.experience": "Experiência",
+    "nav.portfolio": "Projetos",
+    "nav.skills": "Habilidades",
     "nav.about": "Sobre",
+    "nav.contact": "Contato",
     "home.greeting": "Olá, eu sou",
-    "home.name": "Bia Braúna",
-    "home.subtitle": "Full-Stack <span>Desenvolvedora</span> e <span>Futura Engenheira</span><img class=\"charging\" src=\"assets/img/charged.gif\" alt=\"charging picture\">",
-    "home.description": "Nos últimos 7 anos, como estudante de computação e freelancer, venho aprimorando minhas habilidades para transformar suas ideias em realidade.",
-    "home.viewProjects": "Ver Projetos",
+    "home.subtitle": "AI <span>Engineer</span> · Python · <span>LLMs</span> em produção",
+    "home.description": "Estudante de Engenharia Eletrônica e de Computação na UFRJ. Coloco LLMs em produção: pipelines de IA generativa que escrevem catálogos de e-commerce na FashionAI, e automações em Python e um chat com RAG na Globo.",
+    "home.viewProjects": "Ver projetos",
     "home.or": "ou",
-    "home.readAboutMe": "Leia Sobre Mim",
-    "home.curriculo": "Currículo Lattes",
-    "services.title": "Nossos <span>Serviços</span>",
-    "services.frontend.title": "Desenvolvimento Front-End",
-    "services.frontend.desc": "Possui anos de experiência com as seguintes tecnologias, a fim de fazer sites criativos que se adequem ao objetivo do cliente.",
-    "services.backend.title": "Desenvolvimento Back-End",
-    "services.backend.desc": "Carreira majoritariamente acadêmica, com desenvolvimento de software acadêmico na área da agricultura e freelancers em diversas áreas.",
-    "services.mobile.title": "Desenvolvimento Mobile",
-    "services.mobile.desc": "Habilidade indispensável no mundo atual. Atualmente desenvolvo majoritariamente aplicativos híbridos.",
-    "services.technologies": "Tecnologias",
-    "portfolio.title": "Últimos <span>Projetos</span>",
-    "portfolio.greenhope.title": "Econsciente",
-    "portfolio.greenhope.desc": "App em desenvolvimento focado em incentivar a coleta seletiva no estado do Rio de Janeiro por meio de um jogo.",
-    "portfolio.bot.title": "Bot",
-    "portfolio.bot.desc": "Programado em python, o bot pode assumir várias responsabilidades, como nesse projeto foi listar membros por seus cargos e acompanhar as mudanças envolvidas.",
-    "portfolio.dotnet.title": ".NET",
-    "portfolio.dotnet.desc": "Software em .NET desenvolvido para a análise do crescimento e do desenvolvimento de plantas, focado em determinar as necessidades da planta a fim de aumentar a produtividade.",
-    "portfolio.clinica.title": "Clínica",
-    "portfolio.clinica.desc": "Software desenvolvido em java para agendamento e controle de consultas tanto para uso dos pacientes, quanto para uso dos médicos.",
-    "contact.title": "Fale <span>Comigo!</span>",
-    "contact.fullname": "Nome Completo",
-    "contact.email": "E-mail",
-    "contact.phone": "Telefone",
-    "contact.subject": "Assunto",
-    "contact.message": "Mensagem",
-    "contact.send": "Enviar Mensagem",
-    "about.title": "Sobre Mim",
-    "about.subtitle": "Full-Stack <span>Desenvolvedora</span> e <span>Futura Engenheira</span>",
-    "about.desc": "Eu cresci em uma cidade pequena admirada em como as invenções ao longo dos tempos foram melhorando o mundo, na programação descobri que eu poderia criar qualquer coisa que eu quisesse e me apaixonei, atualmente me desenvolvo cada dia mais para dar esse super poder aos meus clientes.",
-    "about.cta": "Vamos trabalhar juntos!",
-    "footer.copyright": "Copyright &copy; 2024 por &lt;/Bia&gt; Todos os direitos reservados."
+    "home.viewExperience": "Ver experiência",
+    "experience.title": "Experiência <span>profissional</span>",
+    "xp.globo.role": "Desenvolvedora Python Júnior · Automação",
+    "xp.globo.org": "Globo (via SysManager) · jun/2026",
+    "xp.globo.1": "Sustento e evoluo cerca de 40 automações RPA em Python, de rotinas diárias a processos mensais de fechamento contábil.",
+    "xp.globo.2": "Atuo no desenvolvimento de um chat com RAG (LangChain) que responde perguntas a partir de documentos internos.",
+    "xp.globo.3": "No hackathon interno, construí um Agent Gateway (Flask, protocolo A2A, MongoDB) para rotear tarefas entre agentes de IA e desenvolvi agentes que se comunicam entre si por A2A.",
+    "xp.globo.4": "Investigo e corrijo incidentes em produção, registrando causa raiz e melhorias para evitar reincidência.",
+    "xp.fashion.role": "Desenvolvedora Full Stack &amp; IA",
+    "xp.fashion.org": "FashionAI · IA generativa para e-commerce · mar/2025",
+    "xp.fashion.1": "Pipelines com LLMs que classificam produtos entre +42 categorias e geram descrições, nomes e tags de SEO para catálogos de marcas de moda, com refinamento de prompts a partir do feedback de cada cliente.",
+    "xp.fashion.2": "Sistema de versionamento de prompts com variáveis por cliente, que reduziu em ~60% o tempo de configuração de novos clientes.",
+    "xp.fashion.3": "Busca vetorial híbrida (Qdrant, vetores densos e esparsos) para busca de produtos e personalização da navegação.",
+    "xp.fashion.4": "Fine-tuning da OpenAI em jobs em lote com Redis e filas; +30 endpoints REST e integrações com VTEX, Shopify, Omnichat e OpenAI.",
+    "portfolio.title": "Meus <span>projetos</span>",
+    "proj.code": "Código",
+    "proj.financas.title": "Finanças · app de finanças com IA",
+    "proj.financas.desc": "Categoriza os gastos da fatura do cartão. Regras e um dicionário aprendido resolvem os gastos recorrentes sem custo; o LLM entra só para estabelecimentos novos, com saída estruturada e lista fechada de categorias, e o que tem baixa confiança vai para revisão humana, que ensina o dicionário.",
+    "proj.financas.result": "Avaliação com divisão por tempo: 63,9% dos gastos resolvidos sem LLM, com 100% de acerto. 33 testes automatizados.",
+    "proj.econsciente.title": "E-Consciente · gestão de resíduos com IA",
+    "proj.econsciente.desc": "Classificador de resíduos com visão computacional que substitui a triagem manual, num app que incentiva a coleta seletiva no Rio de Janeiro.",
+    "proj.econsciente.result": "Pipeline de agentes autônomos (Planner → Executor → Tester) com Claude Agent SDK, que gerou commits reais e poupou ~5–6 h de trabalho repetitivo.",
+    "proj.rodnan.title": "Rodnan Score · avaliação médica",
+    "proj.rodnan.desc": "Calculadora clínica do escore de Rodnan: o médico clica nas regiões do corpo e o escore é somado na hora.",
+    "proj.rodnan.result": "Validada por especialistas e adotada no doutorado de um pesquisador da UFRJ.",
+    "proj.clinica.title": "Clínica Dutton · agendamento de consultas",
+    "proj.clinica.desc": "Sistema de agendamento e controle de consultas, com áreas separadas para pacientes e médicos.",
+    "skills.title": "Minhas <span>habilidades</span>",
+    "skills.ai": "IA e LLMs",
+    "skills.eval": "Avaliação de LLMs",
+    "skills.structured": "Saída estruturada",
+    "skills.backend": "Linguagens e backend",
+    "skills.queues": "Filas",
+    "skills.cloud": "Cloud, DevOps e qualidade",
+    "about.title": "Sobre mim",
+    "about.subtitle": "Engenharia na <span>UFRJ</span>, IA em <span>produção</span>",
+    "about.desc": "Estudo Engenharia Eletrônica e de Computação na Poli/UFRJ e trabalho com IA aplicada desde 2025. Gosto de transformar um problema de negócio em um sistema de IA que dá para medir: quanto acerta, quanto custa e quando precisa de uma pessoa. Quero construir produtos de IA com impacto mensurável. Falo inglês fluente.",
+    "about.cta": "Vamos conversar",
+    "contact.title": "Fale <span>comigo</span>",
+    "contact.intro": "O jeito mais rápido de falar comigo é por e-mail ou LinkedIn."
   },
   en: {
-    "header.logo": "Bia Braúna",
-    "header.role": "Developer",
+    "header.role": "AI Engineer",
     "nav.home": "Home",
-    "nav.services": "Services",
-    "nav.portfolio": "Portfolio",
-    "nav.contact": "Contact",
+    "nav.experience": "Experience",
+    "nav.portfolio": "Projects",
+    "nav.skills": "Skills",
     "nav.about": "About",
+    "nav.contact": "Contact",
     "home.greeting": "Hi, I'm",
-    "home.name": "Bia Braúna",
-    "home.subtitle": "Full-Stack <span>Developer</span> and <span>Future Engineer</span><img class=\"charging\" src=\"assets/img/charged.gif\" alt=\"charging picture\">",
-    "home.description": "Over the past 7 years, as a computer student and a freelancer, I've been improving my skills to be capable of turning your ideas into reality.",
-    "home.viewProjects": "View Projects",
+    "home.subtitle": "AI <span>Engineer</span> · Python · <span>LLMs</span> in production",
+    "home.description": "Electronics and Computer Engineering student at UFRJ. I put LLMs into production: generative AI pipelines that write e-commerce catalogs at FashionAI, and Python automations and a RAG chatbot at Globo.",
+    "home.viewProjects": "View projects",
     "home.or": "or",
-    "home.readAboutMe": "Read About Me",
-    "home.curriculo": "Lattes CV",
-    "services.title": "Our <span>Services</span>",
-    "services.frontend.title": "Front-End Development",
-    "services.frontend.desc": "Years of experience with the following technologies, aiming to create creative websites that fit the client's goals.",
-    "services.backend.title": "Back-End Development",
-    "services.backend.desc": "Mainly academic career, with academic software development in agriculture and freelance work in various areas.",
-    "services.mobile.title": "Mobile Development",
-    "services.mobile.desc": "An essential skill in today's world. Currently, I mostly develop hybrid apps.",
-    "services.technologies": "Technologies",
-    "portfolio.title": "Latest <span>Projects</span>",
-    "portfolio.greenhope.title": "Econsciente",
-    "portfolio.greenhope.desc": "App under development focused on encouraging selective collection in the state of Rio de Janeiro through a game.",
-    "portfolio.bot.title": "Bot",
-    "portfolio.bot.desc": "Programmed in python, the bot can take on various responsibilities, such as listing members by their roles and tracking changes involved.",
-    "portfolio.dotnet.title": ".NET",
-    "portfolio.dotnet.desc": ".NET software developed for analyzing plant growth and development, focused on determining plant needs to increase productivity.",
-    "portfolio.clinica.title": "Clinic",
-    "portfolio.clinica.desc": "Software developed in Java for scheduling and controlling appointments for both patients and doctors.",
-    "contact.title": "Contact <span>Me!</span>",
-    "contact.fullname": "Full Name",
-    "contact.email": "E-mail",
-    "contact.phone": "Phone Number",
-    "contact.subject": "Subject",
-    "contact.message": "Message",
-    "contact.send": "Send Message",
-    "about.title": "About Me",
-    "about.subtitle": "Full-Stack <span>Developer</span> and <span>Future Engineer</span>",
-    "about.desc": "I grew up in a small town, amazed at how inventions have improved the world over time. In programming, I discovered I could create anything I wanted and fell in love. Now, I develop myself every day to give this superpower to my clients.",
-    "about.cta": "Let's work together!",
-    "footer.copyright": "Copyright &copy; 2024 by &lt;/Bia&gt; All Rights Reserved."
+    "home.viewExperience": "View experience",
+    "experience.title": "Work <span>Experience</span>",
+    "xp.globo.role": "Junior Python Developer · Automation",
+    "xp.globo.org": "Globo (via SysManager) · Jun 2026",
+    "xp.globo.1": "I maintain and improve about 40 Python RPA automations, from daily routines to the monthly accounting close.",
+    "xp.globo.2": "I work on a RAG chatbot (LangChain) that answers questions from internal documents.",
+    "xp.globo.3": "At the internal hackathon, I built an Agent Gateway (Flask, A2A protocol, MongoDB) that routes tasks between AI agents, and developed agents that talk to each other over A2A.",
+    "xp.globo.4": "I investigate and fix production incidents, recording root causes and improvements to prevent them from happening again.",
+    "xp.fashion.role": "Full Stack &amp; AI Developer",
+    "xp.fashion.org": "FashionAI · generative AI for e-commerce · Mar 2025",
+    "xp.fashion.1": "LLM pipelines that classify products into 42+ categories and generate descriptions, names and SEO tags for fashion brands' catalogs, with prompts refined from each client's feedback.",
+    "xp.fashion.2": "A prompt versioning system with per-client variables that cut new-client setup time by ~60%.",
+    "xp.fashion.3": "Hybrid vector search (Qdrant, dense and sparse vectors) for product search and personalized browsing.",
+    "xp.fashion.4": "OpenAI fine-tuning in batch jobs with Redis and queues; 30+ REST endpoints and integrations with VTEX, Shopify, Omnichat and OpenAI.",
+    "portfolio.title": "My <span>Projects</span>",
+    "proj.code": "Code",
+    "proj.financas.title": "Finanças · AI personal finance app",
+    "proj.financas.desc": "Categorizes credit card expenses. Rules and a learned dictionary handle recurring merchants at no cost; the LLM is called only for new merchants, with structured output and a closed list of categories, and low-confidence answers go to human review, which teaches the dictionary.",
+    "proj.financas.result": "Time-split evaluation: 63.9% of expenses resolved without the LLM, with 100% accuracy. 33 automated tests.",
+    "proj.econsciente.title": "E-Consciente · AI waste management",
+    "proj.econsciente.desc": "A computer vision waste classifier that replaces manual sorting, in an app that encourages recycling in Rio de Janeiro.",
+    "proj.econsciente.result": "Autonomous agent pipeline (Planner → Executor → Tester) with the Claude Agent SDK that produced real commits and saved ~5–6 h of repetitive work.",
+    "proj.rodnan.title": "Rodnan Score · medical assessment",
+    "proj.rodnan.desc": "A clinical calculator for the Rodnan skin score: the physician clicks body regions and the score adds up instantly.",
+    "proj.rodnan.result": "Validated by specialists and adopted in a UFRJ researcher's PhD work.",
+    "proj.clinica.title": "Clínica Dutton · appointment scheduling",
+    "proj.clinica.desc": "Appointment scheduling and management, with separate areas for patients and doctors.",
+    "skills.title": "My <span>Skills</span>",
+    "skills.ai": "AI and LLMs",
+    "skills.eval": "LLM evaluation",
+    "skills.structured": "Structured output",
+    "skills.backend": "Languages and backend",
+    "skills.queues": "Queues",
+    "skills.cloud": "Cloud, DevOps and testing",
+    "about.title": "About me",
+    "about.subtitle": "Engineering at <span>UFRJ</span>, AI in <span>production</span>",
+    "about.desc": "I study Electronics and Computer Engineering at Poli/UFRJ and have worked with applied AI since 2025. I like turning a business problem into an AI system you can measure: how often it is right, how much it costs, and when it needs a person. I want to build AI products with measurable impact. I speak fluent English.",
+    "about.cta": "Let's talk",
+    "contact.title": "Contact <span>Me</span>",
+    "contact.intro": "The fastest way to reach me is by e-mail or LinkedIn."
   }
 };
 
 function setLanguage(lang) {
-  // Text content
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (translations[lang][key]) {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.hasAttribute('data-i18n-placeholder')) {
-        // el.placeholder = translations[lang][key];
-      } else {
-        el.innerHTML = translations[lang][key];
-      }
-    }
-  });
-//   Placeholders
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    const key = el.getAttribute('data-i18n-placeholder');
-    if (translations[lang][key]) {
-      el.placeholder = translations[lang][key];
-    }
-  });
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const text = translations[lang][el.getAttribute('data-i18n')];
+        if (text) el.innerHTML = text;
+    });
 }
 
-document.getElementById('ptBtn').addEventListener('click', function() {
-  setLanguage('pt');
-});
-document.getElementById('enBtn').addEventListener('click', function() {
-  setLanguage('en');
-});
-
-// Set default language
+document.getElementById('ptBtn').addEventListener('click', () => setLanguage('pt'));
+document.getElementById('enBtn').addEventListener('click', () => setLanguage('en'));
 setLanguage('pt');
